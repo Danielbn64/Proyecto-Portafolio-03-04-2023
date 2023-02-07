@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+}
+.container .project-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.container .list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: auto;
+}
+.container .list-container .project-container {
+  display: flex;
+  flex-direction: column;
+  margin: 60px;
+}
+.container .list-container .project-container .image {
+  width: 380px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}/*# sourceMappingURL=projects.component.css.map */

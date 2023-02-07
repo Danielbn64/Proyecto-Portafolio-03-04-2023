@@ -1,0 +1,25 @@
+.layout {
+  display: grid;
+  grid-template-columns: 38% 58%;
+  grid-template-rows: 100%;
+  grid-template-areas: "aside main";
+}
+.layout .aside {
+  grid-area: aside;
+  background-color: #1a1a1a;
+  color: #e3e3e3;
+}
+.layout .container {
+  grid-area: main;
+  height: 800px;
+}
+.layout .container .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 200px;
+}
+.layout .container .about p {
+  width: 80%;
+}/*# sourceMappingURL=about.component.css.map */

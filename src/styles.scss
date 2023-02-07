@@ -1,126 +1,122 @@
 /** ***************** GENERALES ******************* **/
 
 * {
-    margin: 0px;
-    padding: 0px;
-    color: #1a1a1a;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  color: #1a1a1a;
+  box-sizing: border-box;
 }
 
-body {
-    font-family: 'Titillium Web', sans-serif;
+html {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+
+  body {
+    font-family: "Titillium Web", sans-serif;
     color: #aaa;
-    height: 100%;
 
     ul {
+      display: flex;
+
+      li {
         display: flex;
-
-        li {
-
-            display: flex;
-            margin-left: 2rem;
-            margin-right: 2rem;
-        }
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
     }
 
     a {
-
-        text-decoration: none;
-        font-size: 14px;
-        color: #383838
+      text-decoration: none;
+      font-size: 14px;
+      color: #383838;
     }
 
     p {
-
-        font-size: 15px;
-
+      font-size: 15px;
     }
 
     label {
-
-        font-size: 17px;
-
+      font-size: 17px;
     }
 
     input {
-
-        font-size: 17px;
-        border-radius: 5px;
-        border: 0;
-
+      font-size: 17px;
+      border-radius: 5px;
+      border: 0;
     }
 
     button {
-
-        font-size: 17px;
-        color: white;
-        border: 0;
-        border-radius: 5px;
-        background-color: #412e8bd6;
-        width: 90px;
-        height: 40px;
-
+      font-size: 17px;
+      color: white;
+      border: 0;
+      border-radius: 5px;
+      background-color: #412e8bd6;
+      width: 90px;
+      height: 40px;
+      cursor:pointer;
     }
 
     button:hover {
-
-        background-color: #b4a8e8d6;
-        transition: background-color 120ms;
+      background-color: #b4a8e8d6;
+      transition: background-color 120ms;
     }
-
+  }
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 900px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 669px;
-
-    h2 {
-
-        margin: 20px;
-
-    }
+  h2 {
+    margin: 20px;
+  }
 }
-
 
 /** ***************** CABECERA ******************* **/
 
 .header {
-
-    grid-area: header;
-    background-color: #e3e3e3;
-    position: fixed;
-    height: 58px;
-    width: 100%;
-    z-index: 1;
-
+  background-color: #ffffff;
+  border-bottom: solid #dadada 1px;
+  position: fixed;
+  height: 58px;
+  width: 100%;
+  z-index: 1;
 }
 
 /** ***************** CONTENIDO ******************* **/
 
 .main-content {
-
-    height: 100%;
-    background-color: #fff;
-
+  height: 100%;
+  background-color: #fff;
 }
 
+/** ***************** CONSUTAS DE MEDIOS GENERALES ******************* **/
 
-/** ***************** PIE DE PÁGINA ******************* **/
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+}
 
-.footer {
+/* Escritorio pequeño / tablet */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
 
+/* Tablets y phablets */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+}
 
+/* Teléfonos */
+@media screen and (max-width: 575px) {
+  .header {
+    background-color: rgba(255, 255, 255, 0);
     position: fixed;
-    left: 0;
+    height: auto;
+    width: auto;
     bottom: 0;
-    color: #fff;
-    border-top: 20px solid #1a1a1a;
-    background-color: #1a1a1a;
-    border-bottom: 35px solid #1a1a1a;
-    width: 100%;
-
+    right: 0;
+    border-radius: 100%;
+    z-index: 1;
+    border-bottom: none;
+  }
 }

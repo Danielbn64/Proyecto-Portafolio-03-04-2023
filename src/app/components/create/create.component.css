@@ -1,0 +1,61 @@
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+.form-wrapper .form-create {
+  display: flex;
+  flex-direction: row;
+  background-color: #e3e3e3;
+  border-radius: 0.4rem;
+  width: 100%;
+}
+.form-wrapper .form-create .form-create-one {
+  display: flex;
+  flex-direction: column;
+  align-items: initial;
+  margin-bottom: 40px;
+  width: auto;
+}
+.form-wrapper .form-create .form-create-one div {
+  margin: 20px 20px 0px 20px;
+}
+.form-wrapper .form-create .form-create-one div input {
+  height: 25px;
+}
+.form-wrapper .form-create .form-create-one div p {
+  width: 100%;
+  height: 20px;
+}
+.form-wrapper .form-create .form-create-one div p span {
+  color: #e10429;
+}
+.form-wrapper .form-create .form-create-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+}
+.form-wrapper .form-create .form-create-two div {
+  margin: 20px 20px 0px 20px;
+}
+.form-wrapper .form-create .form-create-two div p {
+  width: 100%;
+  height: 20px;
+}
+.form-wrapper .form-create .form-create-two div p span {
+  color: #e10429;
+}
+.form-wrapper .form-create .form-create-two textarea {
+  width: 100%;
+  font-size: 15px;
+  height: 180px;
+  padding-bottom: 50px;
+}
+.form-wrapper .form-create .form-create-two .button-end {
+  padding-left: 450px;
+}
+.form-wrapper .form-create .form-create-two .button-end button {
+  margin-bottom: 20px;
+}/*# sourceMappingURL=create.component.css.map */

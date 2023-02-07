@@ -1,0 +1,26 @@
+.options {
+  display: flex;
+}
+.options .margin {
+  margin: 150px;
+}
+.options .margin .button-edit {
+  display: inline-block;
+  font-size: 17px;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  background-color: rgba(55, 40, 117, 0.838);
+  width: 80px;
+  height: 25px;
+}
+.options .margin .button-delete {
+  display: inline-block;
+  font-size: 17px;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  background-color: rgba(55, 40, 117, 0.838);
+  width: 80px;
+  height: 25px;
+}/*# sourceMappingURL=detail.component.css.map */

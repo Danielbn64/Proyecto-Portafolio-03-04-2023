@@ -1,6 +1,67 @@
-.aside{
+.about-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding-top: 150px;
 
-    height: 300px;
-    width: 100px;
-    background-color: #1a1a1a;;
+  .image-mask {
+    width: auto;
+    height: 200px;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+
+  .header-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:50px;
+    margin-bottom:50px;
+
+    h1{
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.container {
+  height: auto;
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .text {
+      display: inline;
+      justify-content: center;
+      width: 60%;
+      text-align: justify;
+      font-size: medium;
+      line-height: 25px;
+      height: auto;
+    }
+
+    .learnings {
+      display: flex;
+      justify-content: start;
+      left: 0;
+      margin-top: 40px;
+      margin-bottom: 100px;
+      width: 65%;
+      align-self: center;
+      ul {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        line-height: 25px;
+        font-size: medium;
+      }
+    }
+  }
 }

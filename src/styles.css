@@ -1,0 +1,76 @@
+/** ***************** GENERALES ******************* **/
+* {
+  margin: 0px;
+  padding: 0px;
+  color: #1a1a1a;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  color: #aaa;
+}
+body ul {
+  display: flex;
+}
+body ul li {
+  display: flex;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+body a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #383838;
+}
+body p {
+  font-size: 15px;
+}
+body label {
+  font-size: 17px;
+}
+body input {
+  font-size: 17px;
+  border-radius: 5px;
+  border: 0;
+}
+body button {
+  font-size: 17px;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  background-color: rgba(65, 46, 139, 0.8392156863);
+  width: 90px;
+  height: 40px;
+}
+body button:hover {
+  background-color: rgba(180, 168, 232, 0.8392156863);
+  transition: background-color 120ms;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 900px;
+}
+.container h2 {
+  margin: 20px;
+}
+
+/** ***************** CABECERA ******************* **/
+.header {
+  grid-area: header;
+  background-color: #e3e3e3;
+  position: fixed;
+  height: 58px;
+  width: 100%;
+  z-index: 1;
+}
+
+/** ***************** CONTENIDO ******************* **/
+.main-content {
+  height: 100%;
+  background-color: #fff;
+}/*# sourceMappingURL=styles.css.map */
