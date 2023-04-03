@@ -1,7 +1,0 @@
-Iniciar un proyecto de node js:
-
-	npm init
-
-Levantar el servidor local:
-
-	npm start

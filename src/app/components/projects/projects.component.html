@@ -1,7 +1,8 @@
-<h2 class="project-title">Proyectos</h2>
 <section class="container">
+  <h2 class="title">Proyectos</h2>
   <span [ngClass]="{ empty: empty }">{{emptyMessage}}</span> 
-  <ul class="list-container">
+<div class="list-container">
+  <ul class="list">
     <li *ngFor="let project of projects">
       <div class="project-container">
         <a [routerLink]="['/proyecto', project._id]">
@@ -12,11 +13,12 @@
             *ngIf="project.image"
           />
           <div>
-            {{ project.year }}
-            {{ project.languages }}
+            <p><strong>Año: </strong></p>{{ project.year }}
+            <p><strong>Tecnologiás: </strong></p>{{ project.languages }}
           </div>
         </a>
       </div>
     </li>
   </ul>
+</div>
 </section>

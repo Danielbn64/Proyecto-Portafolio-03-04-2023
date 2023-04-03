@@ -40,9 +40,13 @@ export class LandingPageComponent implements OnInit {
         this.featured = new Array<Project>();
 
         for (let project of this.projects) {
-          if (project.category == 'destacado') {
+          if (project.category == 'destacados') {
             this.featured.push(project);
-          } 
+            
+          } else{
+            this.activate = false;
+            this.notEnough = 'No hay suficientes proyectos destacados';
+          }
         }
       } else {
         this.activate = false;

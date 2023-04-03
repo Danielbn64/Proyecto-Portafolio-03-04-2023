@@ -103,11 +103,11 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-          width: 80%;
+          width: 90%;
           height: auto;
   
           div {
-            width: 80%;
+            width: 100%;
             height: auto;
   
             p {
@@ -123,44 +123,50 @@
       .icons-wrapper {
         display: flex;
         flex-flow: row;
-        flex-direction: row;
         flex-wrap: wrap;
         margin-bottom: 80px;
         margin-top: 10px;
-        width: 90px;
+        width: 300px;
   
         .icons {
           p {
             color: #fff;
-            font-size: 10px;
+            font-size: 18px;
+            text-align: left;
           }
   
           .mysql {
-            width: 30px;
-            height: 30px;
+            width: 70px;
+            height: 70px;
             margin-top: 15px;
+            flex-basis: 25%;
           }
   
           .mongodb {
-            width: 24px;
-            height: 20px;
+            width: 40px;
+            height: 40px;
+            margin-top: 45px;
+            flex-basis: 25%;
           }
   
           .nodejs {
-            width: 20px;
-            height: 25px;
-            margin-top: 25px;
+            width: 45px;
+            height: 50px;
+            margin-top: 35px;
+            flex-basis: 25%;
           }
   
           .angular {
-            width: 20px;
-            height: 20px;
-            margin-top: 30px;
+            width: 45px;
+            height: 45px;
+            margin-top: 40px;
+            flex-basis: 25%;
           }
   
           .laravel {
-            width: 20px;
-            height: 20px;
+            width: 40px;
+            height: 40px;
+            flex-basis: 25%;
           }
         }
       }
