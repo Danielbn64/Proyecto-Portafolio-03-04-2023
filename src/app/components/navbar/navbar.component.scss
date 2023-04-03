@@ -1,21 +1,20 @@
 .content-nav {
   height: auto;
 
-  .hamburger-menu{
-
+  .hamburger-menu {
     display: none;
-    
-    .hamburger-menu-icon{
+
+    .hamburger-menu-icon {
       display: none;
     }
   }
 
-  .navbar-wrapper{
-    display:flex;
+  .navbar-wrapper {
+    display: flex;
     justify-content: center;
   }
 
-  .hidden{
+  .hidden {
     display: none;
   }
 
@@ -23,8 +22,7 @@
     display: flex;
     align-self: center;
     width: auto;
-    margin-left: 30px;
-    margin-right: 90px;
+    margin-left: 25px;
 
     #main-icon {
       fill: #383838;
@@ -39,11 +37,16 @@
     width: 60%;
 
     ul {
+      justify-content: flex-end;
       li {
         a:hover {
           color: #00b8d4;
           transition: color 120ms;
         }
+      }
+
+      .margin {
+        margin: 0;
       }
     }
   }
@@ -51,22 +54,25 @@
   .social-media {
     display: flex;
     margin-bottom: 5px;
+    margin-left: 20px;
     align-items: center;
 
-    ul{
-      li{
-        margin-left: 15px;
-        margin-right: 35px;
+    a{
+      margin-right: 30px;
+
+      #linkedin-icon {
+        width: 25px;
+        height: 30px;
+        fill: #383838;
+      }
+  
+      #github-icon {
+        width:20px;
+        height: 24px;
+        fill: #383838;
       }
     }
 
-    #linkedin-icon {
-      fill: #383838;
-    }
-
-    #github-icon {
-      fill: #383838;
-    }
 
     .selected {
       display: flex;

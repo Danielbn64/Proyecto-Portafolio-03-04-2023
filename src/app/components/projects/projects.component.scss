@@ -1,17 +1,9 @@
-.project-title {
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items:last baseline;
-}
-
 .container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin-bottom: 200px;
   height: auto;
-
 
   .list-container {
     display: flex;
@@ -31,4 +23,11 @@
       }
     }
   }
+}
+
+.project-title {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: last baseline;
 }

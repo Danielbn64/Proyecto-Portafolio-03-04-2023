@@ -27,12 +27,12 @@ html {
 
     a {
       text-decoration: none;
-      font-size: 14px;
+      font-size: 13.5px;
       color: #383838;
     }
 
     p {
-      font-size: 15px;
+      font-size: 18px;
     }
 
     label {
@@ -63,12 +63,21 @@ html {
   }
 }
 
+.empty{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height:540px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 900px;
+  height: auto;
+
 
   h2 {
     margin: 20px;
@@ -94,17 +103,6 @@ html {
 }
 
 /** ***************** CONSUTAS DE MEDIOS GENERALES ******************* **/
-
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-}
-
-/* Escritorio pequeño / tablet */
-@media screen and (min-width: 768px) and (max-width: 991px) {
-}
-
-/* Tablets y phablets */
-@media screen and (min-width: 576px) and (max-width: 767px) {
-}
 
 /* Teléfonos */
 @media screen and (max-width: 575px) {

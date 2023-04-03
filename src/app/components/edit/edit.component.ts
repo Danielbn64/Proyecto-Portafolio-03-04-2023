@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Project } from '../../models/project';
 import { ProjectService } from '../../services/project.service';
 import { UploadService } from '../../services/upload.service';
-import { Global } from '../../services/global';
+import { Global } from '../../../environments/environment';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-edit',
   templateUrl: '../create/create.component.html',
-  styleUrls: ['./edit.component.scss'],
+  styleUrls: ['../create/create.component.scss'],
 })
 export class EditComponent implements OnInit {
   public project!: Project;

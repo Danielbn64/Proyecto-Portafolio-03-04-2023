@@ -8,7 +8,7 @@ import Cookies from 'js-cookie';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss','./login-media.component.scss'],
+  styleUrls: ['./login.component.scss', './login-media.component.scss'],
 })
 export class LoginComponent {
   userForm!: FormGroup;
@@ -16,7 +16,8 @@ export class LoginComponent {
   public password!: string;
   public role: string;
   public user: User;
-  hide: boolean | undefined;
+  public hide: boolean | undefined;
+  public invalid: string = '';
 
   constructor(
     private readonly _userService: UserService,
@@ -45,21 +46,26 @@ export class LoginComponent {
   onSubmit(values: any): void {
     this.user.email = values.email;
     this.user.password = values.password;
-    this._userService.login(this.user).subscribe((response) => {
-      if (response.status == 200) {
-        const token = response.body.token;
-        const expirationDate = new Date();
-        expirationDate.setMinutes(expirationDate.getMinutes() + 30);
-        Cookies.set('token', token, {
-          httpOnly: false,
-          sameSite: 'strict',
-          secure: true,
-          expires: expirationDate,
-          path: '',
-        });
+    this._userService.login(this.user).subscribe(
+      (response) => {
+        if (response.status == 200) {
+          const token = response.body.token;
+          const expirationDate = new Date();
+          expirationDate.setMinutes(expirationDate.getMinutes() + 30);
+          Cookies.set('token', token, {
+            sameSite: 'strict',
+            secure: true,
+            expires: expirationDate,
+            path: '',
+          });
 
-        this._router.navigate(['/panel-administrador']);
+          this._router.navigate(['/panel-administrador']);
+        }
+      },
+
+      (error) => {
+        this.invalid = error.error.message;
       }
-    });
+    );
   }
 }

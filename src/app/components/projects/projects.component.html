@@ -1,5 +1,6 @@
-<h2 class="project-title">Projectos</h2>
+<h2 class="project-title">Proyectos</h2>
 <section class="container">
+  <span [ngClass]="{ empty: empty }">{{emptyMessage}}</span> 
   <ul class="list-container">
     <li *ngFor="let project of projects">
       <div class="project-container">
@@ -11,7 +12,6 @@
             *ngIf="project.image"
           />
           <div>
-            {{ project.category }}
             {{ project.year }}
             {{ project.languages }}
           </div>

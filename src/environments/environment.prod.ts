@@ -1,0 +1,1 @@
+export const Global = { url: 'https://daniload.com/api/'};

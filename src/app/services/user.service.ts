@@ -3,7 +3,7 @@ import { HttpClient, HttpRequest } from '@angular/common/http';
 import { User } from '../models/user';
 import { Observable } from 'rxjs';
 import Cookies from 'js-cookie'; //intente agregar "allowSyntheticDefaultImports": true
-import { Global } from './global';
+import { Global } from '../../environments/environment';
 import { Router } from '@angular/router';
 
 @Injectable({

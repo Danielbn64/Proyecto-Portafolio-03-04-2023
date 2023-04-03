@@ -20,10 +20,15 @@
         </div>
         <p>
           -Este es mi portafolio de desarrollador web donde estare publicando
-          todos mis proyectos
+          todos mis proyectos.
           <br /><br />
           -Esta página web fue programada completamente por mi, puedes ver el
-          código fuente si das click aquí.
+          código fuente si das
+          <a
+            href="https://github.com/Danielbn64/Portfolio-Project-07-02-23"
+            target="_blank"
+            >click aquí</a
+          >.
         </p>
       </div>
       <div class="paragraph">
@@ -52,7 +57,7 @@
       </div>
     </section>
   </div>
-  <div  class="about-title">
+  <div class="about-title margin">
     <h3>Herramientas</h3>
   </div>
   <div class="icons-wrapper">
@@ -170,35 +175,56 @@
     <div class="featured-title">
       <h3>Proyectos Destacados</h3>
     </div>
-    <div class="featured-layout">
+    <span [ngClass]="{ empty: !activate }" *ngIf="!activate">
+      <p>{{notEnough}}</p>
+    </span>
+    <div *ngIf="activate" class="featured-layout">
       <div class="box-one">
         <span class="more-options-1">
-          <a class="more-options-button-1">detalle</a>
+          <a
+            class="more-options-button-1"
+            [routerLink]="['/proyecto', featured[0]._id]"
+            >detalle</a
+          >
         </span>
-        <img
-          class="image-one"
-          src="{{ url + 'get-image/' + featured[0].image }}"
-          *ngIf="featured[0].image"
-        />
+        <a [routerLink]="['/proyecto', featured[0]._id]" class="show-link">
+          <img
+            class="image-one"
+            src="{{ url + 'get-image/' + featured[0].image }}"
+            *ngIf="featured[0].image"
+          />
+        </a>
       </div>
       <div class="box-two">
-        <img
-          class="image-two"
-          src="{{ url + 'get-image/' + featured[1].image }}"
-          *ngIf="featured[1].image"
-        />
+        <a [routerLink]="['/proyecto', featured[1]._id]" class="show-link">
+          <img
+            class="image-two"
+            src="{{ url + 'get-image/' + featured[1].image }}"
+            *ngIf="featured[1].image"
+          />
+        </a>
         <span class="more-options-2">
-          <a class="more-options-button-2">detalle</a>
+          <a
+            class="more-options-button-2"
+            [routerLink]="['/proyecto', featured[1]._id]"
+            >detalle</a
+          >
         </span>
       </div>
       <div class="box-three">
-        <img
-          class="image-three"
-          src="{{ url + 'get-image/' + featured[2].image }}"
-          *ngIf="featured[2].image"
-        />
+        <a [routerLink]="['/proyecto', featured[2]._id]" class="show-link">
+          <img
+            class="image-three"
+            src="{{ url + 'get-image/' + featured[2].image }}"
+            *ngIf="featured[2].image"
+          />
+        </a>
         <span class="more-options-3">
-          <a class="more-options-button-3">detalle</a>
+          <a
+            class="more-options-button-3"
+            [routerLink]="['/proyecto', featured[2]._id]"
+            >detalle</a
+          >
         </span>
       </div>
       <div class="box-four">

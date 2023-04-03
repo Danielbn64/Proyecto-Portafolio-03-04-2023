@@ -2,6 +2,7 @@
 const mongoose = require("mongoose");
 const app = require("./app");
 const port = 3000;
+const fs = require("fs");
 
 mongoose.Promise = global.Promise;
 mongoose
@@ -14,3 +15,11 @@ mongoose
     });
   })
   .catch((error) => console.log(error));
+
+if (fs.existsSync("uploads")) {
+  console.log("El fichero uploads ya existe!");
+} else {
+  fs.mkdir("uploads", () => {
+    console.log("El fichero uploads ha sido creado!");
+  });
+}

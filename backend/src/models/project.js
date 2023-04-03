@@ -9,6 +9,8 @@ var ProjectSchema = Schema({
   category: String,
   year: Number,
   languages: String,
+  codeLink: String,
+  webLink: String,
   image: String,
 });
 

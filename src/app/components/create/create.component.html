@@ -98,6 +98,40 @@
             </p>
           </div>
           <div>
+            <label for="codeLink">
+              <h4>enlace aL código</h4> </label
+            ><br />
+            <input
+              type="text"
+              name="codeLink"
+              #codeLink="ngModel"
+              [(ngModel)]="project.codeLink"
+              required
+            />
+            <p>
+              <span *ngIf="codeLink.touched && !codeLink.valid">
+                El enlace es obligatorio </span
+              ><br />
+            </p>
+          </div>
+          <div>
+            <label for="webLink">
+              <h4>enlace aL código</h4> </label
+            ><br />
+            <input
+              type="text"
+              name="webLink"
+              #webLink="ngModel"
+              [(ngModel)]="project.webLink"
+              required
+            />
+            <p>
+              <span *ngIf="webLink.touched && !webLink.valid">
+                El enlace es obligatorio </span
+              ><br />
+            </p>
+          </div>
+          <div>
             <label for="image">
               <h4>Imagen del proyecto</h4>
             </label>

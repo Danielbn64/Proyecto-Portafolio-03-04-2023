@@ -1,0 +1,117 @@
+@media screen and (min-width:  575px) and (max-width: 1299px) {
+  .container {
+    height: auto;
+    .details-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      width: 100%;
+
+      .image {
+        width: 60%;
+        margin-top: 150px;
+      }
+
+      .description {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 55px;
+        margin-bottom: 55px;
+        width: 80%;
+        text-align: start;
+        align-self: center;
+
+        h2 {
+          font-size: medium;
+        }
+      }
+    }
+  }
+}
+
+/* Escritorio pequeño / tablet */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Tablets y phablets */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+}
+
+/* Teléfonos */
+@media screen and (max-width: 575px) {
+  .container {
+    height: auto;
+    .details-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      width: 100%;
+
+      .image {
+        width: 80%;
+        margin-top: 50px;
+      }
+
+      .description {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 55px;
+        margin-bottom: 55px;
+        width: 80%;
+        text-align: start;
+        align-self: center;
+
+        h2 {
+          font-size: medium;
+        }
+      }
+    }
+
+    .project-options {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      margin-bottom: 35px;
+
+      .margin {
+        margin: 20px;
+
+        .button-edit {
+          display: inline-block;
+          font-size: 17px;
+          color: white;
+          border: 0;
+          border-radius: 5px;
+          background-color: #ffb700;
+        }
+
+        .button-edit:hover {
+          background-color: #ffd66d;
+          transition: background-color 120ms;
+        }
+
+        .button-delete {
+          display: inline-block;
+          font-size: 17px;
+          color: white;
+          border: 0;
+          border-radius: 5px;
+          background-color: #e10429;
+        }
+
+        .button-delete:hover {
+          background-color: #ff4665;
+          transition: background-color 120ms;
+        }
+      }
+    }
+  }
+}

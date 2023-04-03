@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Project } from '../../models/project';
 import { ProjectService } from '../../services/project.service';
 import { UploadService } from '../../services/upload.service';
-import { Global } from '../../services/global';
+import { Global } from '../../../environments/environment';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -23,7 +23,7 @@ export class CreateComponent implements OnInit {
     private readonly _projectService: ProjectService,
     private readonly _uploadService: UploadService
   ) {
-    this.project = new Project('', '', '', '', 2022, '', '');
+    this.project = new Project('', '', '', '', 2022, '', '','','');
     this.title = 'Crear proyecto';
     this.url = Global.url;
   }
@@ -50,7 +50,8 @@ export class CreateComponent implements OnInit {
           .then((result: any) => {
             this.status = 'success';
             form.reset();
-            this.savedProject = result;
+            this.savedProject = result.project;
+            console.log(this.savedProject._id);
           });
       } else {
         this.status = 'failed';

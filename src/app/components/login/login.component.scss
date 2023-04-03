@@ -1,8 +1,7 @@
 .form-wrapper {
   display: flex;
   justify-content: center;
-  width: 35%;
-  max-width: 35%;
+  width: 300px;
   height: auto;
 
   .form-login {
@@ -13,7 +12,7 @@
     border-radius: 0.4rem;
     align-items: center;
     margin-bottom: 10rem;
-    width: 60%;
+    width: 300px;
 
     div {
       margin: 20px 20px 0px 20px;
@@ -39,4 +38,13 @@
       color: #e10429;
     }
   }
+}
+
+.invalid{
+  height:auto;
+  width: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  text-align: center;
 }

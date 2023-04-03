@@ -12,6 +12,11 @@
     height: 200px;
     border-radius: 100%;
     overflow: hidden;
+
+    img {
+      width: 200px;
+      height: 200px;
+    }
   }
 
   .header-title {
@@ -19,10 +24,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top:50px;
-    margin-bottom:50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 
-    h1{
+    h1 {
       margin-bottom: 20px;
     }
   }
@@ -42,14 +47,14 @@
       justify-content: center;
       width: 60%;
       text-align: justify;
-      font-size: medium;
+      font-size: 18px;
       line-height: 25px;
       height: auto;
     }
 
     .learnings {
       display: flex;
-      justify-content: start;
+      justify-content: flex-start;
       left: 0;
       margin-top: 40px;
       margin-bottom: 100px;
@@ -60,7 +65,22 @@
         flex-direction: column;
         width: auto;
         line-height: 25px;
-        font-size: medium;
+
+        li{
+          margin-bottom: 10px;
+          a{
+            font-size: 18px;
+            img{
+              height:20px;
+              margin-right: 10px;
+            }
+          }
+          a:hover {
+            color: #00b8d4;
+            transition: color 120ms;
+            font-size: 18px;
+          }
+        }
       }
     }
   }

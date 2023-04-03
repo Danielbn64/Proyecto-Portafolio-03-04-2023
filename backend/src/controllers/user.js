@@ -21,7 +21,7 @@ const controller = {
       user.password = params.password;
       user.role = "ROLE_ADMIN";
 
-      User.findOne({ email: user.email.toLowerCase() }, (error, issetUser) => {
+      User.findOne({ role: user.role }, (error, issetUser) => {
         if (error) {
           res.status(500).send({ message: "Error al guardar el usuario" });
         } else {
@@ -52,7 +52,7 @@ const controller = {
               });
             });
           } else {
-            res.status(200).send({ message: "El usuario ya existe" });
+            res.status(200).send({ message: "Solo puedes crear un usuario administrador" });
           }
         }
       });
@@ -75,7 +75,7 @@ const controller = {
             if (!isMatch) {
               res
                 .status(404)
-                .send({ message: "Error al escribir la contraseña" });
+                .send({ message: "El usuario no existe" });
             } else {
               if (params.gettoken) {
                 const token = jwt.createToken(user);

@@ -7,9 +7,8 @@
     />
     <div class="description">
       <h1>{{ project.name }}</h1>
-      <h2>{{ project.category }}</h2>
+      <br>
       <p>{{ project.description }}</p>
-      <p>{{ project.languages }}</p>
     </div>
   </div>
   <div *ngIf="hide" class="project-options">
@@ -25,6 +24,22 @@
       <button (click)="deleteProject(project._id)" class="button-delete">
         Borrar
       </button>
+    </div>
+  </div>
+  <div *ngIf="!hide" class="project-options">
+    <div class="margin">
+     <a target="blanck" href="{{ project.codeLink }}">
+      <button>  
+        Ver código
+      </button>
+    </a>
+    </div>
+    <div class="margin">
+      <a target="blanck" href="{{ project.webLink }}">
+          <button>
+          Visitar web
+        </button>
+        </a>
     </div>
   </div>
 </div>

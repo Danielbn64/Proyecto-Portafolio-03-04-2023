@@ -26,6 +26,8 @@ const controller = {
     project.category = params.category;
     project.year = params.year;
     project.languages = params.languages;
+    project.codeLink = params.codeLink;
+    project.webLink = params.webLink;
     project.image = null;
 
     project.save((error, projectStored) => {
@@ -155,12 +157,9 @@ const controller = {
                 .status(500)
                 .send({ message: "La imagen no se ha subido" });
             if (!projectUpdated)
-              return res
-                .status(404)
-                .send({
-                  message:
-                    "El proyecto no existe y no se ha asignado la imagen",
-                });
+              return res.status(404).send({
+                message: "El proyecto no existe y no se ha asignado la imagen",
+              });
             else {
               return res.status(200).send({
                 project: projectUpdated,

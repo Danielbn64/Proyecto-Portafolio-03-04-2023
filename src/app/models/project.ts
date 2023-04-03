@@ -6,6 +6,8 @@ export class Project {
     public category: string,
     public year: number,
     public languages: string,
+    public codeLink: string,
+    public webLink: string,
     public image: string
   ) {}
 }
