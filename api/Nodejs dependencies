@@ -1,0 +1,35 @@
+Crear un proyecto en nodejs:
+	
+	npm init
+
+Instalar express:
+
+	npm install --save express
+
+Instalar Bcrypt nodejs:
+	
+	npm install --save bcrypt-nodejs
+
+Instalar Bodyparse:
+
+	npm install --save body-parse
+
+Instalar Connect Multiparty:
+
+	npm install --save connect-multiparty
+
+Instalar Jwt:
+
+	npm install --save jwt-simple
+
+Instalar moment:
+
+	npm install --save moment
+
+Instalar Mongoose:
+
+	npm install --save mongoose
+
+Instalar nodemon
+
+	npm install --save--dev nodemon
