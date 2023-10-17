@@ -20,3 +20,6 @@ ejemplo: cd C:\xampp\htdocs\proyecto-portafolio\proyecto-portafolio\api
 
 1. Entrar en la ruta localhost:4200 desde el navegador.
 
+
+
+
