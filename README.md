@@ -1,5 +1,5 @@
 # Proyecto Portafolio
-Portafolio personal para mostrar proyectos de desarrollo
+Portafolio personal para mostrar proyectos de desarrollo.
 # Especificaciones:
 Angular: v15.0.0
 
