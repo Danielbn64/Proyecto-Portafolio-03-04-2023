@@ -6,7 +6,7 @@ Angular: v15.0.0
 Nodejs: v16.15.1
 
 # Instalar:
-1. Instalar las versiones correcta Nodejs y Angularcli asi como tambien instalar Mongodb y executar el daemon
+1. Instalar las versiones correcta Nodejs y Angularcli asi como tambien instalar Mongodb y executar el daemon.
   
 1. Clonar repositorio.
 
