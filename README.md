@@ -8,7 +8,7 @@ Nodejs: v16.15.1
 # Instalar:
  1. Clonar repositorio.
 
- 1. Dirigirse a la carpeta donde se tiene el repositorio del proyecto y entrar en el directorio: api mediante la consola de comandos.
+ 1. Dirigirse a la carpeta donde se tiene el repositorio del proyecto y entrar en el directorio: **api** mediante la consola de comandos.
 
 ejemplo: cd C:\xampp\htdocs\proyecto-portafolio\proyecto-portafolio\api
 
