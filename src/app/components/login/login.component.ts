@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { User } from '../../models/user';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import Cookies from 'js-cookie';
 
 @Component({
   selector: 'app-login',
@@ -21,8 +19,7 @@ export class LoginComponent {
 
   constructor(
     private readonly _userService: UserService,
-    private readonly fb: FormBuilder,
-    private _router: Router
+    private readonly fb: FormBuilder
   ) {
     this.role = 'ROLE_ADMIN';
     this.user = new User('', '', '', '', this.role);
@@ -49,17 +46,7 @@ export class LoginComponent {
     this._userService.login(this.user).subscribe(
       (response) => {
         if (response.status == 200) {
-          const token = response.body.token;
-          const expirationDate = new Date();
-          expirationDate.setMinutes(expirationDate.getMinutes() + 30);
-          Cookies.set('token', token, {
-            sameSite: 'strict',
-            secure: true,
-            expires: expirationDate,
-            path: '',
-          });
-
-          this._router.navigate(['/panel-administrador']);
+          window.location.href = '/panel-administrador';
         }
       },
 

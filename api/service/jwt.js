@@ -16,10 +16,10 @@ exports.createToken = function (user) {
   return jwt.encode(payload, key.secret);
 };
 
-exports.decoderToken = function (token, key) {
-  if (token && key) {
-    return jwt.decode(token, key);
-  } else {
-    return false;
-  }
-};
+// exports.decoderToken = function (token, key) {
+//   if (token && key) {
+//     return jwt.decode(token, key);
+//   } else {
+//     return false;
+//   }
+// };

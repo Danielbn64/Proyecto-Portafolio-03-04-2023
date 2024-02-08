@@ -9,7 +9,7 @@
   .form-create {
     display: flex;
     flex-direction: row;
-    background-color: #e3e3e3;
+    background-color: var(--background-color-one);
     border-radius: 0.4rem;
     width: 100%;
 
@@ -32,7 +32,7 @@
           height: 20px;
 
           span {
-            color: #e10429;
+            color: var(--danger);
           }
         }
       }
@@ -52,7 +52,7 @@
           height: 20px;
 
           span {
-            color: #e10429;
+            color: var(--danger);
           }
         }
 

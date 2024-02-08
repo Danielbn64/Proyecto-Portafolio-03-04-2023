@@ -8,9 +8,12 @@ import { UserService } from './services/user.service';
 })
 export class AppComponent {
   title = 'proyecto-portafolio';
-  hide: boolean | undefined;
 
-  constructor(private readonly _userService: UserService) {
-    this.hide = false;
+  onActivate(event: any) {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
   }
 }

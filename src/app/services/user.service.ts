@@ -1,36 +1,46 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpRequest } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { User } from '../models/user';
 import { Observable } from 'rxjs';
-import Cookies from 'js-cookie'; //intente agregar "allowSyntheticDefaultImports": true
 import { Global } from '../../environments/environment';
-import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
   private readonly API = Global.url;
-  public asyncResponse!: string;
   public validation = false;
 
-  constructor(private readonly http: HttpClient, private _router: Router) {}
+  constructor(private readonly http: HttpClient) {}
 
-  login(user: User, gettoken = null): Observable<any> {
-    if (gettoken != null) {
-      user.gettoken = gettoken;
-    }
-
+  login(user: User): Observable<any> {
     const body = user;
     return this.http.post<any>(this.API + 'login', body, {
       observe: 'response',
+      withCredentials: true,
     });
   }
 
-  isLoggedIn(): boolean {
-    if (Cookies.get('token')) {
-      this.validation = true;
-    }
-    return this.validation;
+  tokenVerify(): Observable<any> {
+    return this.http.post<any>(
+      this.API + 'token-verification',
+      {},
+      {
+        observe: 'response',
+        withCredentials: true,
+      }
+    );
+  }
+
+  isLoggedIn(): Observable<boolean> {
+    return new Observable<boolean>((observe) => {
+      this.tokenVerify().subscribe((response) => {
+        if (response.body.tokenValidation) {
+          observe.next(true);
+        } else {
+          observe.next(false);
+        }
+      });
+    });
   }
 }

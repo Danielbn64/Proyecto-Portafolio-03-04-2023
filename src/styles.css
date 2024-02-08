@@ -10,6 +10,7 @@ body {
   font-family: "Titillium Web", sans-serif;
   color: #aaa;
 }
+
 body ul {
   display: flex;
 }
@@ -61,12 +62,10 @@ body button:hover {
 
 /** ***************** CABECERA ******************* **/
 .header {
-  grid-area: header;
   background-color: #e3e3e3;
   position: fixed;
   height: 58px;
   width: 100%;
-  z-index: 1;
 }
 
 /** ***************** CONTENIDO ******************* **/

@@ -1,10 +1,28 @@
-/** ***************** GENERALES ******************* **/
-
 * {
   margin: 0px;
   padding: 0px;
   color: #1a1a1a;
   box-sizing: border-box;
+}
+
+:root {
+  --body-color: #aaa;
+  --background-color-one: #f8f8f8;
+  --background--color-two: #161B22;
+  --background-color-three: #fff;
+  --darkening: #000;
+  --button: #412e8b;
+  --button-hover: #b4a8e8;
+  --link: #ffffff;
+  --link-button: #00b8d4;
+  --link-button-hover: #aae0e9;
+  --border-color: #535353;
+  --border-bottom-color: #dadada;
+  --danger: #e10429;
+  --danger-hover: #ff4665;
+  --warning: #ffb700;
+  --waring-hover: #ffd66d;
+  --icon-fill: #ffffff;
 }
 
 html {
@@ -13,7 +31,12 @@ html {
 
   body {
     font-family: "Titillium Web", sans-serif;
-    color: #aaa;
+    color: var(--body-color);
+
+    .root {
+      display: block;
+      width: 100%;
+    }
 
     ul {
       display: flex;
@@ -28,7 +51,6 @@ html {
     a {
       text-decoration: none;
       font-size: 13.5px;
-      color: #383838;
     }
 
     p {
@@ -50,25 +72,25 @@ html {
       color: white;
       border: 0;
       border-radius: 5px;
-      background-color: #412e8bd6;
+      background-color: var(--button);
       width: 90px;
       height: 40px;
-      cursor:pointer;
+      cursor: pointer;
     }
 
     button:hover {
-      background-color: #b4a8e8d6;
+      background-color: var(--button-hover);
       transition: background-color 120ms;
     }
   }
 }
 
-.empty{
+.empty {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height:540px;
+  height: 540px;
 }
 
 .container {
@@ -78,12 +100,11 @@ html {
   align-items: center;
   height: auto;
 
-
   h2 {
     margin: 20px;
   }
 
-  .title{
+  .title {
     margin-top: 105px;
     margin-bottom: 55px;
   }
@@ -92,34 +113,65 @@ html {
 /** ***************** CABECERA ******************* **/
 
 .header {
-  background-color: #ffffff;
-  border-bottom: solid #dadada 1px;
-  position: fixed;
-  height: 58px;
+  position: absolute;
   width: 100%;
-  z-index: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 4;
 }
 
 /** ***************** CONTENIDO ******************* **/
 
 .main-content {
-  height: 100%;
-  background-color: #fff;
+  height: 100vh;
+  background-color: var(--background-color-three);
+}
+
+.footer-content {
+  display: block;
+  width: 100%;
+}
+
+.footer-landing-page {
+  position: absolute;
+  top:3000px;
+  width: 100%;
+  z-index: 3;
 }
 
 /** ***************** CONSUTAS DE MEDIOS GENERALES ******************* **/
 
-/* Teléfonos */
-@media screen and (max-width: 575px) {
-  .header {
-    background-color: rgba(255, 255, 255, 0);
-    position: fixed;
-    height: auto;
-    width: auto;
-    bottom: 0;
-    right: 0;
-    border-radius: 100%;
-    z-index: 1;
-    border-bottom: none;
+@media screen and (min-width: 575px) and (max-width: 1350px) {
+  .footer-landing-page {
+    position: absolute;
+    top:3350px;
+    width: 100%;
+    z-index: 3;
   }
 }
+
+@media screen and (min-width: 100px) and (max-width: 575px) {
+  html {
+    body {
+      .header {
+        background-color: rgba(255, 255, 255, 0);
+        position: fixed;
+        height: 0;
+        width: auto;
+        bottom: 0;
+        right: 0;
+        border-radius: 100%;
+        z-index: 99;
+        border-bottom: none;
+      }
+    }
+  }
+
+  .footer-landing-page {
+    position: absolute;
+    top:3130px;
+    width: 100%;
+    z-index: 3;
+  }
+}
+

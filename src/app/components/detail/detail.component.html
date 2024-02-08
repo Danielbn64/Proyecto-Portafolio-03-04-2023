@@ -1,6 +1,7 @@
 <div *ngIf="project" class="container">
   <div class="details-container">
     <img
+      alt="proyecto imagen"
       class="image"
       src="{{ url + 'get-image/' + project.image }}"
       *ngIf="project.image"
@@ -11,7 +12,7 @@
       <p>{{ project.description }}</p>
     </div>
   </div>
-  <div *ngIf="hide" class="project-options">
+  <div *ngIf="showAdminOptions" class="project-options">
     <div class="margin">
       <button
         [routerLink]="['/editar-proyecto', project._id]"
@@ -26,7 +27,7 @@
       </button>
     </div>
   </div>
-  <div *ngIf="!hide" class="project-options">
+  <div *ngIf="!showAdminOptions" class="project-options">
     <div class="margin">
      <a target="blanck" href="{{ project.codeLink }}">
       <button>  
@@ -43,3 +44,4 @@
     </div>
   </div>
 </div>
+<app-footer class="footer-content"></app-footer>

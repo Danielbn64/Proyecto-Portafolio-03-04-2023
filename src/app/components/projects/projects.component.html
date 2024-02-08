@@ -8,6 +8,7 @@
         <a [routerLink]="['/proyecto', project._id]">
           <h3>{{ project.name }}</h3>
           <img
+          alt="proyecto imagen"
             class="image"
             src="{{ url + 'get-image/' + project.image }}"
             *ngIf="project.image"
@@ -22,3 +23,4 @@
   </ul>
 </div>
 </section>
+<app-footer class="footer-content"></app-footer>

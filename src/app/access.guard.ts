@@ -5,14 +5,14 @@ import {
   RouterStateSnapshot,
   UrlTree,
 } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, switchMap, of } from 'rxjs';
 import { UserService } from './services/user.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AccessGuard implements CanActivate {
-  permission!: boolean;
+  permission: boolean | undefined;
 
   constructor(private _userService: UserService) {}
 
@@ -24,7 +24,6 @@ export class AccessGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    this.permission = this._userService.isLoggedIn();
-    return this.permission;
+    return this._userService.isLoggedIn()
   }
 }

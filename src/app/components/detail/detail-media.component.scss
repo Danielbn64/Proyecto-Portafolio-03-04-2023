@@ -87,28 +87,28 @@
         .button-edit {
           display: inline-block;
           font-size: 17px;
-          color: white;
+          color: var(--background-color-three);
           border: 0;
           border-radius: 5px;
-          background-color: #ffb700;
+          background-color: var(--warning);
         }
 
         .button-edit:hover {
-          background-color: #ffd66d;
+          background-color: var(--warning--hover);
           transition: background-color 120ms;
         }
 
         .button-delete {
           display: inline-block;
           font-size: 17px;
-          color: white;
+          color: var(--background-color-three);
           border: 0;
           border-radius: 5px;
-          background-color: #e10429;
+          background-color: var(--danger);
         }
 
         .button-delete:hover {
-          background-color: #ff4665;
+          background-color: var(--danger-hover);
           transition: background-color 120ms;
         }
       }

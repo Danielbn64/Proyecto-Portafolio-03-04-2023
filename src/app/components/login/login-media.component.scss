@@ -32,7 +32,7 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        background-color: #fff;
+        background-color: var(--background-color-one);
         border-radius: none;
         align-items: center;
         width: auto;
@@ -59,7 +59,7 @@
           display: flex;
           flex-wrap: wrap;
           font-size: 15px;
-          color: #e10429;
+          color: var(--danger);
         }
       }
     }

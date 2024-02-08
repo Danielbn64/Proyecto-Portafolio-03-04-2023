@@ -8,10 +8,10 @@ import { UserService } from '../../services/user.service';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
-  styleUrls: ['./detail.component.scss','./detail-media.component.scss'],
+  styleUrls: ['./detail.component.scss', './detail-media.component.scss'],
 })
-export class DetailComponent implements OnInit, DoCheck {
-  public hide: boolean | undefined;
+export class DetailComponent implements OnInit {
+  public showAdminOptions: boolean | undefined;
   public url: string;
   public project!: Project;
   public linkCode!: string;
@@ -27,14 +27,14 @@ export class DetailComponent implements OnInit, DoCheck {
   }
 
   ngOnInit(): void {
+    this._userService.isLoggedIn().subscribe((loggedIn) => {
+      this.showAdminOptions = loggedIn;
+    });
+
     this._route.params.subscribe((params) => {
       let id = params['id'];
       this.getProject(id);
     });
-  }
-
-  ngDoCheck(): void {
-    this.hide = this._userService.isLoggedIn();
   }
 
   getProject(id: any) {

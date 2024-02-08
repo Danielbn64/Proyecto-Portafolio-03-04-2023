@@ -15,7 +15,6 @@ export class ErrorComponent implements OnInit {
   ){ }
 
   ngOnInit(): void {
-
     this._router.navigate(['/']);
   }
 
