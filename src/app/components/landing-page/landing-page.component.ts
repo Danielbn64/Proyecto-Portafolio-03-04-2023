@@ -2,7 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../../services/project.service';
 import { Global } from '../../../environments/environment';
 import { Project } from '../../models/project';
-import { fading } from '../animation';
+import { CardInfoSkills } from '../../models/card-info-skills';
+import {
+  cardInfoSkillLayout,
+  cardInfoSkillAlgorithms,
+  cardInfoSkillDataSource,
+} from '../../../layouts-info';
+import { CardInfoService } from '../../services/card-info.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -12,9 +18,7 @@ import { fading } from '../animation';
     './landing-page-main.component.scss',
     './landing-page-media.component.scss',
     './landing-page-media-phone.component.scss',
-
   ],
-  animations: [fading],
 })
 export class LandingPageComponent implements OnInit {
   public projects!: Project[];
@@ -22,12 +26,44 @@ export class LandingPageComponent implements OnInit {
   public url: string;
   public activate: boolean = false;
   public notEnough!: string;
+  public cardInfo: CardInfoSkills[] = [];
 
-  constructor(private readonly _projectService: ProjectService) {
+  constructor(
+    private readonly _projectService: ProjectService,
+    private readonly _cardInfoService: CardInfoService
+  ) {
     this.url = Global.url;
   }
 
+  getCardInfo() {
+    this.cardInfo.push(
+      this._cardInfoService.getInfo(
+        cardInfoSkillLayout.title,
+        cardInfoSkillLayout.description,
+        cardInfoSkillLayout.inconsFamiy,
+        cardInfoSkillLayout.cardImage
+      )
+    );
+    this.cardInfo.push(
+      this._cardInfoService.getInfo(
+        cardInfoSkillAlgorithms.title,
+        cardInfoSkillAlgorithms.description,
+        cardInfoSkillAlgorithms.inconsFamiy,
+        cardInfoSkillAlgorithms.cardImage
+      )
+    );
+    this.cardInfo.push(
+      this._cardInfoService.getInfo(
+        cardInfoSkillDataSource.title,
+        cardInfoSkillDataSource.description,
+        cardInfoSkillDataSource.inconsFamiy,
+        cardInfoSkillDataSource.cardImage
+      )
+    );
+  }
+
   ngOnInit(): void {
+    this.getCardInfo();
     this.getFeatured();
   }
 
@@ -42,8 +78,7 @@ export class LandingPageComponent implements OnInit {
         for (let project of this.projects) {
           if (project.category == 'destacados') {
             this.featured.push(project);
-            
-          } else{
+          } else {
             this.activate = false;
             this.notEnough = 'No hay suficientes proyectos destacados';
           }

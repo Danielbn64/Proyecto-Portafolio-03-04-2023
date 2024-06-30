@@ -29,21 +29,6 @@
 
     .margin {
       margin: 50px;
-
-      button{
-        display: inline-block;
-        font-size: 17px;
-        color: var(--background-color-three);
-        border: 0;
-        border-radius: 5px;
-        background-color: var(--link-button);
-      }
-
-      button:hover{
-        background-color: var(--link-button-hover);
-        transition: background-color 120ms;
-      }
-
       .button-edit {
         display: inline-block;
         font-size: 17px;

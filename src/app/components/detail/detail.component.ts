@@ -3,7 +3,7 @@ import { Project } from '../../models/project';
 import { ProjectService } from '../../services/project.service';
 import { Global } from '../../../environments/environment';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { UserService } from '../../services/user.service';
+import { UserService } from '../../../app/modules/auth/services/user.service';
 
 @Component({
   selector: 'app-detail',

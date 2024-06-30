@@ -11,13 +11,16 @@ import { ContactComponent } from './components/contact/contact.component';
 import { CreateComponent } from './components/create/create.component';
 import { ErrorComponent } from './components/error/error.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
-import { LoginComponent } from './components/login/login.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+
 import { ProjectsComponent } from './components/projects/projects.component';
-import { RegisterComponent } from './components/register/register.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { EditComponent } from './components/edit/edit.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { SharedModule } from './modules/shared/shared.module';
+import { CardMainComponent } from './components/card-main/card-main.component';
+import { CardProjectComponent } from './components/card-project/CardProjectComponent';
+import { CardIconFamilyComponent } from './components/card-icon-family/card-icon-family.component';
+import { CardImageComponent } from './components/card-image/card-image.component';
+
 
 @NgModule({
   declarations: [
@@ -27,15 +30,16 @@ import { FooterComponent } from './components/footer/footer.component';
     CreateComponent,
     ErrorComponent,
     LandingPageComponent,
-    LoginComponent,
-    NavbarComponent,
     ProjectsComponent,
-    RegisterComponent,
     DetailComponent,
     EditComponent,
-    FooterComponent,
+    CardMainComponent,
+    CardProjectComponent,
+    CardIconFamilyComponent,
+    CardImageComponent,
   ],
   imports: [
+    SharedModule,
     BrowserModule,
     AppRoutingModule,
     routing,

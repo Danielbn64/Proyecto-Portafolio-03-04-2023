@@ -1,0 +1,11 @@
+<div [ngSwitch]="cardImage">
+  <div class="card-image card-data-source-image" *ngSwitchCase="'dataSource'">
+    <img class="dataSource-image" src="../../../assets/svgs/dataSource.svg" />
+  </div>
+  <div class="card-image card-algorithms-image" *ngSwitchCase="'algorithms'">
+    <img class="algorithms-image" src="../../../assets/svgs/class-diagram-draw.svg" />
+  </div>
+  <div class="card-image card-layout-image" *ngSwitchCase="'layout'">
+    <img class="layout-image" src="../../../assets/svgs/layout-image.svg" />
+  </div>
+</div>

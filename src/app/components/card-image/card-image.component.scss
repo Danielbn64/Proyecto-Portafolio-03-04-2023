@@ -1,0 +1,87 @@
+@import "src/share-main-styles.scss";
+
+@media screen and (min-width: 575px) and (max-width: 1412px) {
+  .card-image {
+    position: absolute;
+    top: 260px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+@media screen and (min-width: 696px) and (max-width: 900px) {
+  .card-layout-image {
+    top: 250px;
+  }
+}
+
+@media screen and (min-width: 575px) and (max-width: 696px) {
+  .card-image {
+    top: 240px;
+    .dataSource-image {
+      width: 300px;
+    }
+
+    .algorithms-image {
+      width: 300px;
+    }
+  }
+  .card-layout-image {
+    top: 280px;
+    .layout-image {
+      width: 430px;
+    }
+  }
+}
+
+@media screen and (min-width: 447px) and (max-width: 575px) {
+  .card-image {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 140px;
+    .dataSource-image {
+      width: 150px;
+    }
+  }
+  .card-algorithms-image {
+    top: 170px;
+    .algorithms-image {
+      width: 150px;
+    }
+  }
+  .card-layout-image {
+    top: 200px;
+    .layout-image {
+      width: 200px;
+    }
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 447px) {
+  .card-image {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 170px;
+    .dataSource-image {
+      width: 150px;
+    }
+
+    .algorithms-image {
+      width: 150px;
+    }
+  }
+  .card-algorithms-image {
+    top: 190px;
+    .algorithms-image {
+      width: 150px;
+    }
+  }
+  .card-layout-image {
+    top: 220px;
+    .layout-image {
+      width: 200px;
+    }
+  }
+}

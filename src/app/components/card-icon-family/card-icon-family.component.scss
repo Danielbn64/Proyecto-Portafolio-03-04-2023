@@ -1,0 +1,165 @@
+.icons-family {
+  bottom: -680px;
+  left: 50%;
+
+  .title-icon {
+    color: var(--background-color-three);
+    font-weight: 200;
+    font-size: 20px;
+  }
+
+  .icon-container {
+    margin: 10px;
+    .icon-name {
+      text-align: center;
+      font-size: 16px;
+      color: var(--background-color-three);
+    }
+  }
+
+  .icon-container-dataSource {
+    width: 95px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon-container-layout {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon-container-algorithms {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1412px) {
+  .icons-family {
+    position: absolute;
+    bottom: -680px;
+    left: 50%;
+    transform: translate(-50%);
+
+    .title-icon {
+      color: var(--background-color-three);
+      font-weight: 200;
+      font-size: 20px;
+    }
+    .icon-container {
+      margin: 20px;
+      .icon-image {
+      }
+      .icon-name {
+        text-align: center;
+        color: var(--background-color-three);
+      }
+    }
+
+    .icon-container-dataSource {
+      width: 100px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (min-width: 575px) and (max-width: 900px) {
+  .icons-family {
+    bottom: -620px;
+    .title-icon {
+    }
+    .icon-container {
+      margin: 10px;
+      .icon-image {
+        width: 35px;
+      }
+      .icon-mysql {
+        width: 45px;
+      }
+      .icon-name {
+        text-align: center;
+        font-size: 15px;
+      }
+    }
+
+    .icon-container-dataSource {
+      width: 100px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .icon-container-algorithms {
+      width: 40px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 575px) {
+  .icons-family {
+    position: absolute;
+    bottom: -335px;
+    left: 50%;
+    transform: translate(-50%);
+
+    .title-icon {
+    }
+    .icon-container {
+      margin: 5px;
+      .icon-image {
+        width: 30px;
+      }
+      .icon-mysql {
+        width: 40px;
+      }
+      .icon-name {
+        text-align: center;
+        font-size: 9px;
+      }
+    }
+
+    .icon-container-dataSource {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      width: 60px;
+    }
+
+    .icon-container-algorithms {
+      width: 40px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 475px) {
+  .icons-family {
+    .icon-container-algorithms {
+      width: 30px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

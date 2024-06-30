@@ -5,8 +5,8 @@ import {
   RouterStateSnapshot,
   UrlTree,
 } from '@angular/router';
-import { Observable, switchMap, of } from 'rxjs';
-import { UserService } from './services/user.service';
+import { Observable } from 'rxjs';
+import { UserService } from '../app/modules/auth/services/user.service';
 
 @Injectable({
   providedIn: 'root',

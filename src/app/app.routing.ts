@@ -6,7 +6,6 @@ import { AboutComponent } from './components/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ErrorComponent } from './components/error/error.component';
-import { LoginComponent } from './components/login/login.component';
 import { CreateComponent } from './components/create/create.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { DetailComponent } from './components/detail/detail.component';
@@ -22,7 +21,7 @@ const appRoutes: Routes = [
     canActivate: [AccessGuard],
   },
   { path: 'contacto', component: ContactComponent },
-  { path: 'login', component: LoginComponent },
+  { path: 'auth', loadChildren: () => import('./modules/auth/auth.module').then( m => m.AuthModule)},
   { path: 'proyecto/:id', component: DetailComponent },
   {
     path: 'editar-proyecto/:id',

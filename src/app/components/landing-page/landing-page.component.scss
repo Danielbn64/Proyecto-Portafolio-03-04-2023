@@ -1,34 +1,69 @@
 .hero {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: start;
-  flex-direction: column;
-  height: 825px;
+  display: block;
 
   .title-hero {
-    padding-left: 200px;
+    position: relative;
+    width: 95%;
+    padding-left: 155px;
+    padding-top: 120px;
     display: flex;
-    justify-content: center;
-    text-align: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
     height: auto;
     z-index: 2;
 
-    h1 {
-      font-size: 9vh;
-      color: var(--background-color-one);
-      margin: 0;
-
-      span {
-        color: var(--link-button);
-      }
+    .title-hero-welcome {
+      font-size: 75px;
+      line-height: 100px;
+      color: var(--background-color-three);
+      margin-left: 5px;
+    }
+    .title-hero-autor {
+      font-size: 75px;
+      color: var(--link-button);
+      margin-left: 5px;
+      line-height: 100px;
     }
 
-    h2 {
-      font-size: 35px;
-      color: var(--background-color-one);
+    .title-hero-work {
+      font-size: 42px;
+      color: var(--background-color-three);
       font-weight: normal;
-      margin: 0;
+      margin-left: 8px;
+      line-height: 85px;
+    }
+
+    .title-autor-image {
+      width: 100%;
+      z-index: 2;
+    }
+
+    .autor-image-wrapper {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-right: 30px;
+      .autor-image {
+        border-radius: 200px;
+        height: 260px;
+      }
+    }
+    animation: loadTitle 2s forwards;
+  }
+
+  @keyframes loadTitle {
+    to {
+      display: flex;
+      justify-content: center;
+      height: auto;
+      z-index: 2;
+      opacity: 1;
+    }
+    from {
+      display: flex;
+      justify-content: center;
+      height: auto;
+      z-index: 2;
+      opacity: 0;
     }
   }
 
@@ -50,17 +85,57 @@
 
   .hero-image-opacity {
     position: fixed;
+    top: 0;
     width: 100%;
-    height: 825px;
-    background: rgb(13, 17, 23);
-    background: rgb(13, 17, 23);
+    height: 100%;
     background: linear-gradient(
       90deg,
-      rgba(13, 17, 23, 1) 40%,
-      rgba(6, 9, 19, 83%) 75%,
-      rgb(0 0 0 / 52%) 90%,
-      rgb(0 0 0 / 48%) 100%
+      rgba(13, 17, 23, 1) 100%,
+      rgba(6, 9, 19, 100%) 100%
     );
     z-index: 1;
+    animation: expandGradient 2s forwards;
+  }
+
+  @keyframes expandGradient {
+    90% {
+      background: linear-gradient(
+        90deg,
+        rgba(13, 17, 23, 1) 100%,
+        rgba(6, 9, 19, 100%) 100%
+      );
+    }
+
+    95% {
+      background: linear-gradient(
+        90deg,
+        rgba(13, 17, 23, 1) 55%,
+        rgba(6, 9, 19, 90%) 75%
+      );
+    }
+
+    97% {
+      background: linear-gradient(
+        90deg,
+        rgba(13, 17, 23, 1) 50%,
+        rgba(6, 9, 19, 90%) 75%
+      );
+    }
+
+    99% {
+      background: linear-gradient(
+        90deg,
+        rgba(13, 17, 23, 1) 45%,
+        rgba(6, 9, 19, 90%) 75%
+      );
+    }
+
+    100% {
+      background: linear-gradient(
+        90deg,
+        rgba(13, 17, 23, 1) 40%,
+        rgba(6, 9, 19, 55%) 75%
+      );
+    }
   }
 }

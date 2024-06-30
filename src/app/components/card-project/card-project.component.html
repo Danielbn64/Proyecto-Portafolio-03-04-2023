@@ -1,0 +1,42 @@
+<div class="projects-container">
+  <div class="card card-proyect">
+    <article class="card-content">
+      <a [routerLink]="['/proyecto', project._id]">
+      <div class="card-image-project-container d-flex justify-content-center">
+          <img
+            class="proyect-image"
+            src="{{ url + 'get-image/' + project.image }}"
+          />
+        </div>
+      </a>
+      <div
+        class="cart-description-container d-flex flex-column justify-content-center al"
+      >
+        <h2 class="title card-content-title align-self-center">
+          {{ project.name }}
+        </h2>
+        <p class="card-content-description align-self-center">
+          {{ project.description }}
+        </p>
+      </div>
+      <footer class="links hide flex-row justify-content-center">
+        <a target="_blank" href="{{ project.codeLink }}">
+          <div class="link-wrapper d-flex justify-content-between">
+            ver código
+            <div class="icon-wrapper d-flex">
+              <img class="align-self-center" src="../../../assets/svgs/external-link-icon.svg" />
+            </div>
+          </div>
+        </a>
+        <a target="_blank" href="{{ project.webLink }}">
+          <div class="link-wrapper hide justify-content-between">
+            visitar web
+            <div class="icon-wrapper d-flex">
+              <img class="align-self-center" src="../../../assets/svgs/external-link-icon.svg" />
+            </div>
+          </div>
+        </a>
+      </footer>
+    </article>
+  </div>
+</div>

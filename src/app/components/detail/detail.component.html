@@ -1,3 +1,6 @@
+<header class="header header-dark">
+  <app-navbar></app-navbar>
+</header>
 <div *ngIf="project" class="container">
   <div class="details-container">
     <img
@@ -30,14 +33,14 @@
   <div *ngIf="!showAdminOptions" class="project-options">
     <div class="margin">
      <a target="blanck" href="{{ project.codeLink }}">
-      <button>  
+      <button class="link-button">  
         Ver código
       </button>
     </a>
     </div>
     <div class="margin">
       <a target="blanck" href="{{ project.webLink }}">
-          <button>
+          <button class="link-button">
           Visitar web
         </button>
         </a>
