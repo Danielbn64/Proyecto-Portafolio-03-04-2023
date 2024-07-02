@@ -1,6 +1,8 @@
 # Proyecto Portafolio
 Portafolio personal para mostrar proyectos de desarrollo.
 ![Portafolio](https://github.com/Danielbn64/Proyecto-Portafolio-03-04-2023/assets/98886911/d019c738-f590-4f85-875b-a98fe3fa3c0f)
+![Untitled](https://github.com/Danielbn64/Proyecto-Portafolio-03-04-2023/assets/98886911/2bde9497-1794-4c0f-9886-ae8fd1957fb0)
+![portfolio_edicion_y_creacion_de_proyecto](https://github.com/Danielbn64/Proyecto-Portafolio-03-04-2023/assets/98886911/50ce139d-c206-41bd-83fc-dd7aaba46a7f)
 
 # Especificaciones:
 Angular: v15.0.0
