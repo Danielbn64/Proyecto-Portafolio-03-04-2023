@@ -1,165 +1,48 @@
-.icons-family {
-  bottom: -680px;
-  left: 50%;
-
-  .title-icon {
-    color: var(--background-color-three);
-    font-weight: 200;
-    font-size: 20px;
-  }
-
+.icons-family-container {
+  flex-wrap: wrap;
+  width: 70vw;
   .icon-container {
-    margin: 10px;
-    .icon-name {
-      text-align: center;
-      font-size: 16px;
-      color: var(--background-color-three);
-    }
-  }
-
-  .icon-container-dataSource {
-    width: 95px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .icon-container-layout {
-    width: 60px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .icon-container-algorithms {
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
   }
 }
 
-@media screen and (min-width: 500px) and (max-width: 1412px) {
-  .icons-family {
-    position: absolute;
-    bottom: -680px;
-    left: 50%;
-    transform: translate(-50%);
-
-    .title-icon {
-      color: var(--background-color-three);
-      font-weight: 200;
-      font-size: 20px;
-    }
+@media screen and (min-width: 630px) and (max-width: 1330px) {
+  .icons-family-container {
+    flex-wrap: wrap;
+    width: 300px;
     .icon-container {
-      margin: 20px;
-      .icon-image {
-      }
-      .icon-name {
-        text-align: center;
-        color: var(--background-color-three);
-      }
-    }
-
-    .icon-container-dataSource {
-      width: 100px;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
+      padding: 10px;
     }
   }
 }
 
-@media screen and (min-width: 575px) and (max-width: 900px) {
-  .icons-family {
-    bottom: -620px;
-    .title-icon {
-    }
+@media screen and (min-width: 500px) and (max-width: 630px) {
+  .icons-family-container {
+    flex-wrap: wrap;
+    width: 300px;
     .icon-container {
-      margin: 10px;
-      .icon-image {
-        width: 35px;
-      }
-      .icon-mysql {
-        width: 45px;
-      }
-      .icon-name {
-        text-align: center;
-        font-size: 15px;
-      }
-    }
-
-    .icon-container-dataSource {
-      width: 100px;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .icon-container-algorithms {
-      width: 40px;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
+      width: 50px;
     }
   }
 }
 
-@media screen and (min-width: 100px) and (max-width: 575px) {
-  .icons-family {
-    position: absolute;
-    bottom: -335px;
-    left: 50%;
-    transform: translate(-50%);
-
-    .title-icon {
-    }
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .icons-family-container {
+    flex-wrap: wrap;
+    width: 60vw;
     .icon-container {
-      margin: 5px;
+      display: flex;
+      justify-content: center;
+      padding-right: 0;
+      padding-bottom: 0;
+      padding-top: 20px;
+      width: 8vw;
       .icon-image {
-        width: 30px;
+        height: 25px;
+        width: 5vw;
       }
-      .icon-mysql {
-        width: 40px;
-      }
-      .icon-name {
-        text-align: center;
-        font-size: 9px;
-      }
-    }
-
-    .icon-container-dataSource {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      width: 60px;
-    }
-
-    .icon-container-algorithms {
-      width: 40px;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-}
-
-@media screen and (min-width: 100px) and (max-width: 475px) {
-  .icons-family {
-    .icon-container-algorithms {
-      width: 30px;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
     }
   }
 }

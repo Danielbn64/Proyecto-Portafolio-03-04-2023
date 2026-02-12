@@ -173,9 +173,9 @@
   }
 }
 
-@media screen and (min-width: 100px) and (max-width: 575px) {
+@media screen and (min-width: 0px) and (max-width: 575px) {
   .footer {
-    height: 600px;
+    height: 300px;
     .contact {
       display: flex;
       flex-direction: column;

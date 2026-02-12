@@ -1,14 +1,15 @@
-<div class="card d-flex">
-  <article class="card-content">
+<div class="card">
+  <article class="card-content fl-left">
     <h2 class="title card-content-title">{{ cardInfo.getTitle() }}</h2>
     <p class="card-content-description">
       {{ cardInfo.getDescription() }}
     </p>
     <footer class="card-footer">
-        <app-card-icon-family [iconsFamily]="iconsFamily"></app-card-icon-family>
+      <app-card-icon-family [iconsFamily]="iconsFamily"></app-card-icon-family>
     </footer>
   </article>
-  <div class="card-image-container d-flex justify-content-center">
-    <app-card-image [cardImage] = "cardImage"></app-card-image>
+  <div class="card-image fl-left">
+    <div class="card-image-opacity"></div>
+    <app-card-image [cardImage]="cardImage"></app-card-image>
   </div>
 </div>

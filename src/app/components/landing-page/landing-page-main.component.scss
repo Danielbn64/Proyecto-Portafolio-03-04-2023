@@ -2,41 +2,43 @@
   position: relative;
   z-index: 2;
   width: 95%;
-  padding-left: 155px;
+  padding-left: 150px;
 
-  .main-paragraf {
-    padding-top: 50px;
-    padding-right: 50px;
-    color: var(--white-paragraf);
-    font-size: 30px;
-  }
+  .section-title-container {
+    .main-paragraf {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      color: var(--white-paragraf);
+      font-size: 30px;
+    }
 
-  .main-title {
-    padding-left: 500px;
-    width: 70%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    color: var(--white-paragraf);
-    font-size: 35px;
+    .main-title {
+      padding-top: 25px;
+      padding-bottom: 80px;
+      align-self: center;
+      color: var(--white-paragraf);
+      font-size: 35px;
+    }
   }
 }
 
 .main-gradient {
   position: absolute;
   z-index: 1;
-  height: 3000px;
+  height: 3200px;
+  overflow: hidden;
   width: 100%;
-  top: 600px;
+  top: 500px;
   padding-top: 50px;
   background: linear-gradient(
     to bottom,
     #0d111700 0 2%,
-    #0d1117 10% 60%,
+    #0d1117 10% 80%,
     #0d111700 100%
   );
 }
 
-@media screen and (min-width: 575px) and (max-width: 1412px) {
+@media screen and (min-width: 575px) and (max-width: 1330px) {
   .main {
     position: relative;
     display: flex;
@@ -51,57 +53,49 @@
       text-align: center;
       padding-right: 30px;
       padding-left: 30px;
+      padding-bottom: 30px;
       line-height: 50px;
     }
 
     .main-title {
       width: auto;
+      padding-top: 25px;
       padding-left: 0px;
       padding-bottom: 50px;
     }
   }
-  .main-gradient {
-    position: absolute;
-    z-index: 1;
-    height: 4000px;
-    width: 100%;
-    top: 500px;
-    padding-top: 50px;
-    background: linear-gradient(
-      to bottom,
-      #0d111700 0 2%,
-      #0d1117 10% 80%,
-      #0d111700 100%
-    );
-  }
 }
 
-@media screen and (min-width: 100px) and (max-width: 575px) {
+@media screen and (min-width: 0px) and (max-width: 575px) {
   .main {
-    padding-left: 0px;
     width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-left: 0px;
+    background-color: #0d1117;
 
-    .main-paragraf {
-      width: 80%;
-      text-align: center;
-      font-size: 20px;
-      padding-right: 0px;
-    }
+    .section-title-container {
+      .main-paragraf {
+        width: 80%;
+        text-align: center;
+        font-size: 20px;
+        padding-right: 0px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+      }
 
-    .main-title {
-      width: auto;
-      font-size: 30px;
-      padding-bottom: 15px;
-      padding-left: 0px;
+      .main-title {
+        width: auto;
+        font-size: 30px;
+        padding-bottom: 25px;
+        padding-left: 0px;
+      }
     }
   }
   .main-gradient {
-    height: 2700px;
-
+    height: 1000px;
   }
 }

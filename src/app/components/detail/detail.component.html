@@ -11,8 +11,12 @@
     />
     <div class="description">
       <h1>{{ project.name }}</h1>
-      <br>
+      <br />
       <p>{{ project.description }}</p>
+      <p><strong>Año: </strong></p>
+      {{ project.year }}
+      <p><strong>Tecnologiás: </strong></p>
+      {{ project.languages }}
     </div>
   </div>
   <div *ngIf="showAdminOptions" class="project-options">
@@ -32,19 +36,14 @@
   </div>
   <div *ngIf="!showAdminOptions" class="project-options">
     <div class="margin">
-     <a target="blanck" href="{{ project.codeLink }}">
-      <button class="link-button">  
-        Ver código
-      </button>
-    </a>
+      <a target="blanck" href="{{ project.codeLink }}">
+        <button class="link-button">Ver código</button>
+      </a>
     </div>
     <div class="margin">
       <a target="blanck" href="{{ project.webLink }}">
-          <button class="link-button">
-          Visitar web
-        </button>
-        </a>
+        <button class="link-button">Visitar web</button>
+      </a>
     </div>
   </div>
 </div>
-<app-footer class="footer-content"></app-footer>

@@ -1,52 +1,88 @@
 @import "src/share-main-styles.scss";
 
-.projects-container {
-  .card-proyect {
-    padding-right: 0px;
-    height: auto;
-    width: 80%;
-    background-color: var(--background--color-two);
-    border-radius: 30px;
-    margin-bottom: 50px;
+.card-proyect {
+  padding: 0;
+  margin: 0;
+  padding-right: 0px;
+  height: auto;
+  width: 93%;
+  background-color: var(--background--color-two);
+  border-radius: 30px;
+  margin-bottom: 50px;
+
+  .proyect-image {
+    object-fit: cover;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    height: 500px;
+    border-radius: 30px 30px 0px 0px;
   }
-}
 
-@media screen and (min-width: 575px) and (max-width: 2000px) {
-  .projects-container {
-    display: flex;
-    justify-content: center;
-  }
-}
+  .card-description-container {
+    height: 200px;
+    .card-content-title {
+      color: var(--background-color-three);
+    }
 
-@media screen and (min-width: 100px) and (max-width: 1195px) {
-  .projects-container {
-    .card-proyect {
-      width: 100%;
-      margin-bottom: 0px;
-      border-radius: 0px;
-      background-color: transparent;
-
-      .card-content-title {
-        display: none;
-      }
-      .card-content-description {
-        display: none;
-      }
-
-      .project-image {
-        width: 80%;
-      }
-
-      .card-image-project-container {
-        .proyect-image {
-          width: 80%;
-          border-radius: 20px;
-        }
-      }
+    .card-content-description {
+      padding: 20px;
+      font-size: 19px;
+      height: 300px;
+      line-height: 38px;
+      color: var(--background-color-three);
     }
   }
+}
 
-  .hide {
-    display: none;
+@media screen and (min-width: 100px) and (max-width: 1330px) {
+  .card-proyect {
+    position: relative;
+    width: 100vw;
+    margin-bottom: 0px;
+    border-radius: 0px;
+    background-color: transparent;
+
+    .proyect-image {
+      margin-bottom: 0;
+      border-radius: 0;
+      height: 70vw;
+    }
+
+    .card-description-container {
+      display: none;
+      .card-content-title {
+        color: var(--background-color-three);
+      }
+
+      .card-content-description {
+        font-size: 30px;
+        line-height: 50px;
+        padding: 20px;
+        height: 300px;
+        color: var(--background-color-three);
+      }
+    }
+
+    .links{
+      justify-content: space-around;
+      background-color: rgba(0,0,0,0.6);
+      width: 100%;
+      position: absolute;
+      left: 50%;
+      transform: translatex(-50%);
+      bottom: 0;
+      z-index: 1;
+      padding-bottom: 8px;
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      .link-wrapper{
+        color: var(--link);
+        margin: 0;
+        width: 150px;
+        font-size: 20px;
+        border: none;
+      }
+    }
   }
 }

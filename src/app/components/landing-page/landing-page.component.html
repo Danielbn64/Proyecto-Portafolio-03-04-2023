@@ -8,7 +8,7 @@
     <h4 class="title-hero-work">Desarrollador web full stack</h4>
     <div class="title-autor-image d-flex">
       <div class="autor-image-wrapper">
-        <img class="autor-image" src="../../../assets/images/selfie.jpg" />
+        <img class="autor-image" src="/assets/images/selfie.jpg" />
       </div>
       <div class="links hero-links align-self-center">
         <a target="_blank" href="http://185.77.96.216:8081/?p=45">
@@ -17,18 +17,21 @@
             <div class="icon-wrapper d-flex">
               <img
                 class="align-self-center"
-                src="../../../../../assets/svgs/cv-icon.svg"
+                src="/assets/svgs/cv-icon.svg"
               />
             </div>
           </div>
         </a>
-        <a target="_blank" href="https://es.linkedin.com/in/daniel-berroteran?original_referer=https%3A%2F%2Fwww.google.es%2F">
+        <a
+          target="_blank"
+          href="https://es.linkedin.com/in/daniel-berroteran?original_referer=https%3A%2F%2Fwww.google.es%2F"
+        >
           <div class="link-wrapper d-flex justify-content-between">
             Linkedin
             <div class="icon-wrapper d-flex">
               <img
                 class="align-self-center"
-                src="../../../../../assets/svgs/linkedin-orange.svg"
+                src="/assets/svgs/linkedin-orange.svg"
               />
             </div>
           </div>
@@ -39,7 +42,7 @@
             <div class="icon-wrapper d-flex">
               <img
                 class="align-self-center"
-                src="../../../../../assets/svgs/github-orange.svg"
+                src="/assets/svgs/github-orange.svg"
                 alt="github-link"
               />
             </div>
@@ -53,15 +56,18 @@
 </div>
 
 <main class="main">
-  <p class="paragraf main-paragraf">
-    Experiencia en desarrollo de páginas web dinamicas y ha medida.
-  </p>
+  <div class="section-title-container d-flex justify-content-center">
+    <p class="title paragraf main-paragraf">
+      Experiencia en desarrollo de páginas web dinamicas y ha medida.
+    </p>
+  </div>
   <app-card-main [cardInfo]="cardInfo[0]"></app-card-main>
   <app-card-main [cardInfo]="cardInfo[1]"></app-card-main>
   <app-card-main [cardInfo]="cardInfo[2]"></app-card-main>
-  <h1 class="title main-title">Proyectos Destacados</h1>
+  <div class="section-title-container d-flex justify-content-center">
+    <h1 class="title main-title">Proyectos Destacados</h1>
+  </div>
   <app-card-project [project]="featured[0]"></app-card-project>
   <app-card-project [project]="featured[1]"></app-card-project>
 </main>
-  <app-footer></app-footer>
 <div class="main-gradient"></div>

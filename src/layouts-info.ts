@@ -1,7 +1,7 @@
 export const cardInfoSkillLayout = {
   title: 'Maquetación',
   description:
-    'Dominio de distintos estilos de maquetación (flexbox, grid, float) y adaptado ha multiples dispositivos, experiencia trabajando con contenido multimedia en el diseño de páginas web, experiencia con AJAX, programación asincrona, Rxjs y Axios.',
+    'Dominio de distintos estilos de maquetación (flexbox, grid, float) y adaptado ha multiples dispositivos, experiencia trabajando con contenido multimedia en el diseño de páginas web, experiencia con AJAX, programación asincrona.',
   inconsFamiy: 'layout',
   cardImage: 'layout',
 };
